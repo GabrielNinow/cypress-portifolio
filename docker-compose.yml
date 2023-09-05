@@ -1,0 +1,24 @@
+version: '3'
+services:
+  e2e-electron:
+    image: "cypress/included:13.1.0"
+    volumes:
+      - ./cypress:/cypress
+      - ./cypress.config.js:/cypress.config.js
+      - ./cypress.config.js:/app/cypress.config.js
+
+  e2e-chrome:
+    image: "cypress/included:13.1.0"
+    command: "--browser chrome"
+    volumes:
+      - ./cypress:/cypress
+      - ./cypress.config.js:/app/cypress.config.js
+
+  e2e-firefox:
+    image: "cypress/included:13.1.0"
+    command: "--browser firefox --config video=false"
+    environment:
+      - DEBUG=cypress:server:browsers:firefox-util,cypress:server:util:process_profiler
+    volumes:
+      - ./cypress:/cypress
+      - ./cypress.config.js:/app/cypress.config.js
