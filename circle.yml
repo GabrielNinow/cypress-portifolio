@@ -5,7 +5,7 @@ jobs:
       docker_layer_caching: false
     steps:
     - checkout
-    - run: docker pull cypress/included:4.1.0
+    - run: docker pull cypress/included:13.1.0
     - run:
         command: docker-compose run e2e-electron
         no_output_timeout: 3m
@@ -15,7 +15,7 @@ jobs:
       docker_layer_caching: false
     steps:
     - checkout
-    - run: docker pull cypress/included:4.1.0
+    - run: docker pull cypress/included:13.1.0
     - run:
         command: docker-compose run e2e-chrome
         no_output_timeout: 3m
@@ -25,7 +25,7 @@ jobs:
       docker_layer_caching: false
     steps:
     - checkout
-    - run: docker pull cypress/included:4.1.0
+    - run: docker pull cypress/included:13.1.0
     - run:
         command: docker-compose run e2e-firefox
         no_output_timeout: 3m
