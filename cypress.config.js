@@ -5,5 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) { },
     supportFile: false,
     baseUrl: 'https://the-internet.herokuapp.com/',
+    video: true,
+    screenshot: true,
   },
 })
