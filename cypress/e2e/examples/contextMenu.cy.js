@@ -8,7 +8,7 @@ context('Actions', () => {
         cy.visit('context_menu');
     })
 
-    it('assert checkboxes click', () => {
+    it('assert context menu', () => {
         contextMenuActions.ClickContextMenu();
         contextMenuActions.AssertAlert();
     })
