@@ -3,9 +3,10 @@
 const { locators } = require('../elements/brokenImagesElements');
 
 
-class basicAuthActions {
+class BrokenImagesActions {
     AssertBrokenImages() {
-        cy.get(`${locators.ImgList} > img`).each(($img) => {
+        cy.log(locators.ImagesContainer)
+        cy.get(`${locators.ImagesContainer} > img`).each(($img) => {
             cy.wrap($img).invoke('attr', 'src').then(($src) => {
                 if ($src.includes('asdf.jpg') || $src.includes('hjkl.jpg')) {
                     chai.expect($img[0].naturalWidth).to.be.equals(0);
@@ -19,4 +20,4 @@ class basicAuthActions {
         })
     }
 
-} export default basicAuthActions;
+} export default BrokenImagesActions;

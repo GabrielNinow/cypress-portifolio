@@ -1,5 +1,5 @@
 const locators = {
-    ImagesContainer: 'div.example',
+    CheckboxContainer: 'form#checkboxes',
 };
 
 module.exports = { locators };
