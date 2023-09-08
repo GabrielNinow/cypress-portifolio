@@ -1,5 +1,5 @@
 const locators = {
-    imagesContainer: 'div.example',
+    contextMenu: 'div#hot-spot',
 };
 
 module.exports = { locators };

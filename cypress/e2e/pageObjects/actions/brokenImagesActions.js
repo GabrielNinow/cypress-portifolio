@@ -5,8 +5,8 @@ const { locators } = require('../elements/brokenImagesElements');
 
 class BrokenImagesActions {
     AssertBrokenImages() {
-        cy.log(locators.ImagesContainer)
-        cy.get(`${locators.ImagesContainer} > img`).each(($img) => {
+        cy.log(locators.imagesContainer)
+        cy.get(`${locators.imagesContainer} > img`).each(($img) => {
             cy.wrap($img).invoke('attr', 'src').then(($src) => {
                 if ($src.includes('asdf.jpg') || $src.includes('hjkl.jpg')) {
                     chai.expect($img[0].naturalWidth).to.be.equals(0);

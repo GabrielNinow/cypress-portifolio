@@ -1,5 +1,5 @@
 const locators = {
-    CheckboxContainer: 'form#checkboxes',
+    checkboxContainer: 'form#checkboxes',
 };
 
 module.exports = { locators };
