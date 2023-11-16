@@ -10,3 +10,8 @@ docker-compose run e2e-chrome
 # run tests using Firefox browser (also pre-installed)
 docker-compose run e2e-firefox
 ```
+
+## known issues
+```
+* Forgot password test is broken because of page internal server error
+```
