@@ -1,5 +1,6 @@
 cypress/videos
 cypress/screenshots
+cypress/downloads
 package-lock.json
 package.json
 node_modules
